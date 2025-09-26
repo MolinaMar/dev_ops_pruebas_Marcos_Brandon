@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Ajusta la sección hero para que ocupe todo el ancho */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-radius: 0;
+  width: 100%;
+}
+
+/* Resto del CSS permanece igual */
+.hero-overlay {
+  color: white;
+  padding: 2rem;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sección Misión/Visión/Valores */
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.about-card {
+  background: #e0e0e0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h2 {
+  color: #8b5a2b;
+  margin-top: 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.about-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Catálogo de salones */
+.catalog-section {
+  margin: 4rem 0;
+}
+
+.catalog-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Estilos para el grid de salones */
+.salones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.salon-card {
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.salon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.salon-name {
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.salon-image-container {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.salon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.salon-card:hover .salon-image {
+  transform: scale(1.05);
+}
+
+.salon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.salon-card:hover .salon-overlay {
+  opacity: 1;
+}
+
+.salon-overlay span {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.salon-card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.salon-card:hover .salon-card-btn {
+  opacity: 1;
+}
+
+/* Modal de detalles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #e0e0e0;
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+}
+
+.reservar-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.reservar-btn:hover {
+  background-color: #45a049;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.modal-image-container {
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.modal-single-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para el carrusel */
+.salon-carousel {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.salon-carousel .carousel .slide {
+  background: transparent;
+}
+
+.salon-carousel .carousel .slide img {
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.salon-carousel .carousel .thumbs-wrapper {
+  margin: 10px 0;
+}
+
+.salon-carousel .carousel .thumb {
+  border: 3px solid transparent;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.salon-carousel .carousel .thumb.selected,
+.salon-carousel .carousel .thumb:hover {
+  border-color: #8b5a2b;
+}
+
+.salon-carousel .carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.3);
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.salon-carousel .carousel .control-arrow:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.modal-details strong {
+  color: #8b5a2b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+  }
+}

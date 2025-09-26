@@ -1,0 +1,167 @@
+.user-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.user-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-tabs button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.user-tabs button:hover {
+  background-color: #e0e0e0;
+}
+
+.user-tabs button.active-tab {
+  border-bottom: 3px solid #4CAF50;
+  font-weight: bold;
+}
+
+.mis-reservas-section, .reservar-section, .editar-perfil-section {
+  background-color: #e8e8e8;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reservas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reservas-table th, .reservas-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.reservas-table th {
+  background-color: #e8e8e8;
+  font-weight: bold;
+}
+
+.reservas-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.cancelar-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelar-btn:hover {
+  background-color: #e04444;
+}
+
+.no-reservas {
+  text-align: center;
+  color: #777;
+  padding: 30px 0;
+  font-style: italic;
+}
+
+.cargando {
+  text-align: center;
+  color: #555;
+  padding: 30px 0;
+  font-weight: bold;
+}
+
+.reservas-table td.cargando,
+.reservas-table td.no-reservas {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #e5e5e5;
+}
+
+.reservar-form {
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group select, .form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.reservar-btn, .actualizar-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.reservar-btn:hover, .actualizar-btn:hover {
+  background-color: #45a049;
+}
+
+.reservar-btn:disabled, .actualizar-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.editar-form, .cambiar-password-form {
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.cambiar-password-form {
+  margin-bottom: 0;
+}
+
+.editar-perfil-section h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+small {
+  color: #777;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}

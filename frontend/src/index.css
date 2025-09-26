@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ajuste para el navbar fijo */
+body {
+  padding-top: 100px; /* Aumentado para evitar que el navbar tape los títulos */
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* Aumentado para móviles */
+  }
+}

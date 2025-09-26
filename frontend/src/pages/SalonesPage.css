@@ -1,0 +1,205 @@
+.salones-container {
+  padding: 2rem;
+  background-color: #d0d0d0;
+}
+
+.salones-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.salones-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.salon-card {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.salon-card h3 {
+  margin-top: 1rem;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.salon-image-container {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.salon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.salon-card:hover .salon-image {
+  transform: scale(1.05);
+}
+
+.reservar-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.reservar-btn:hover {
+  background-color: #45a049;
+}
+
+.reservar-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.modal-reservar-btn {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+/* Modal de detalles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #e0e0e0;
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.modal-image-container {
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.modal-single-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para el carrusel */
+.salon-carousel {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.salon-carousel .carousel .slide {
+  background: transparent;
+}
+
+.salon-carousel .carousel .slide img {
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.salon-carousel .carousel .thumbs-wrapper {
+  margin: 10px 0;
+}
+
+.salon-carousel .carousel .thumb {
+  border: 3px solid transparent;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.salon-carousel .carousel .thumb.selected,
+.salon-carousel .carousel .thumb:hover {
+  border-color: #8b5a2b;
+}
+
+.salon-carousel .carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.3);
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.salon-carousel .carousel .control-arrow:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.modal-details strong {
+  color: #8b5a2b;
+}

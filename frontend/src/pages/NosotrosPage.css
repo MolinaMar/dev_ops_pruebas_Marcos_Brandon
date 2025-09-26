@@ -1,0 +1,106 @@
+/* Contenedor principal con fondo difuminado oscuro */
+div[style*="padding: 2rem"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                    url('../images/salon-de-banquetes-decorado-con-flores.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: calc(100vh - 100px); /* Ajustado para el navbar */
+  padding: 2rem 2rem 4rem 2rem !important; /* Reducido padding superior */
+  margin: 0;
+  color: white; /* Color de texto general blanco */
+}
+
+/* Contenedor de contenido semi-transparente */
+div[style*="padding: 2rem"] > div {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(30, 30, 30, 0.8); /* Fondo oscuro semi-transparente */
+  padding: 3rem !important;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Título principal */
+div[style*="padding: 2rem"] h1 {
+  font-size: 2.8rem;
+  color: #ffffff; /* Blanco puro */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtítulos */
+div[style*="padding: 2rem"] h2 {
+  font-size: 2rem;
+  color: #d4af37; /* Dorado para contrastar */
+  margin: 2.5rem 0 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+/* Párrafos */
+div[style*="padding: 2rem"] p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0; /* Gris claro para mejor lectura */
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Lista de ventajas */
+div[style*="padding: 2rem"] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+div[style*="padding: 2rem"] ul li {
+  background-color: rgba(40, 40, 40, 0.7); /* Fondo oscuro para items */
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  border-left: 4px solid #d4af37; /* Borde dorado */
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+div[style*="padding: 2rem"] ul li:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+  transform: translateX(5px);
+}
+
+div[style*="padding: 2rem"] ul li strong {
+  color: #d4af37; /* Dorado para énfasis */
+}
+
+/* Separadores (los --- que convertiste en HR) */
+div[style*="padding: 2rem"] hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+  margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  div[style*="padding: 2rem"] {
+    padding: 2rem 1rem !important;
+  }
+  
+  div[style*="padding: 2rem"] > div {
+    padding: 2rem !important;
+  }
+  
+  div[style*="padding: 2rem"] h1 {
+    font-size: 2.2rem;
+  }
+  
+  div[style*="padding: 2rem"] h2 {
+    font-size: 1.6rem;
+  }
+}
